@@ -1,0 +1,118 @@
+body{
+    font-family:  "Cormorant", serif;
+}
+
+/* Header */
+.navbar{
+    margin:32px;
+}
+h1{
+    display: inline-block;
+    font-weight: 300;
+    margin:0 32px 0 0;
+}
+.links{
+    display: inline-block;
+}
+.links ul{
+    padding-left:0;
+}
+.links li{
+    display: inline-block; 
+    /* to remove the list markers and to make the list-items go on a single line */
+}
+
+.links a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin:0 8px;    
+}
+/* .links a:hover{
+    border-bottom: 1px solid black;
+} */
+a.active{
+    border-bottom: 1px solid black;
+} 
+
+
+/* Image Gallery */
+.gallery{
+    /* margin:32px; */
+    padding:16px;
+}
+.card{
+    width:49.75%;
+    display: inline-block;
+    
+    box-sizing: border-box;
+    padding:20px;
+}
+.card img{
+    /* Width is set to 100% of the parent's width */
+    width:100%;
+    /* min-width:500px; */
+    
+    /* Not all the images were of a similar height. So to make them all have a similar height, we have set the height to be a fixed value, i.e. 500px. It's a number we've arrived at by trial a dn errors and choosing what looked best. */
+    height:400px;
+
+    /* It maintains the original aspect ratio and doesn't stretch the image */
+    object-fit:cover;
+}
+.card img:hover{
+    opacity:0.9;
+}
+.card h2{
+    font-weight: 300;
+    margin: 8px 0 16px 0;
+}
+
+
+/* Footer */
+.about{
+    width:40%;
+    min-width:600px;
+    margin: 100px 0 100px 200px;
+   
+}
+.about h3{
+    font-size: 40px;
+    font-weight: 100;
+}
+.about h3:nth-of-type(2n){
+    display:inline-block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+    margin-top: 0;
+}
+.contact{
+    margin-top:100px;
+}
+
+.contact p{
+    margin:0;
+    font-size: 20px;
+}
+
+/* Responsive Design Code - without using any Flexbox or Grid Properties */
+/* This was done by pure trial and error and some designs could've been done better!! */
+@media only screen and (max-width: 1000px){
+    .card{
+        width:100%;
+    }
+    .about{
+        margin: 100px 0 100px 100px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .card{
+        padding:0;
+    }
+    .gallery{
+        padding: 8px;
+    }
+    .about{
+        margin: 0 auto 100px auto;
+        min-width: 450px;
+    }
+}
